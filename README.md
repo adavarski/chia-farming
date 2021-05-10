@@ -36,7 +36,7 @@ chia stop all && chia start farmer (free memory; memory leak)
 
 ```
 
-# Install Chia Plot Manager 
+### Install Chia Plot Manager 
 
 
 ```
@@ -73,7 +73,7 @@ Next log check at 2021-05-11 02:07:16
 
 ```
 
-### Monitoring
+### Monitoring 
 
 ```
 cd monitoring/docker-prometheus
