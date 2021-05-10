@@ -1,44 +1,25 @@
-### Install Chia (Ubuntu 20)
+### Install Chia
 
 ```
-sudo apt-get update
-sudo apt-get upgrade -y
+### Check environment
 
-# Install Git
-sudo apt install git -y
-
-# Checkout the source and install
-git clone https://github.com/Chia-Network/chia-blockchain.git -b latest --recurse-submodules
-cd chia-blockchain
-
-sh install.sh
-
-. ./activate
-
-chia keys generate
-chia start farmer
-
-# The GUI requires you have Ubuntu Desktop or a similar windowing system installed.
-# You can not install and run the GUI as root
-
-sh install-gui.sh
-
-cd chia-blockchain-gui
-npm run electron &
-
-### Checks 
+nc -z -v $CHIA_FULL_NODE_IP 8444 (or using https://portchecker.co/)
 
 chia fram summary
 chia wallet show
 chia plots check
 chia show -s -c
-chia stop all && chia start farmer (free memory; memory leak)
+chia stop all && chia start farmer 
 
+### 
+mount SSD disks for plots temp --> /mnt/plots-tmp
+mount HDD disks for plots --> /mnt/plots
+
+chia plots create -k 32 -b 5000 -t /mnt/plots-tmp -d /mnt/plots -r 4 -u 128
 ```
 
 ### Install Chia Plot Manager 
-
-
+  
 ```
 cd ./plot-manager
 python3 -m venv venv
@@ -52,24 +33,23 @@ python manager.py view
 ===============================================================================================================
 num    job     k     pid            start          elapsed_time   phase   phase_times   progress   temp_size
 ===============================================================================================================
-1     devops   32   510118   2021-05-11 00:49:43   01:16:33       1                     6.92%      93 GiB   
-2     devops   32   523740   2021-05-11 01:49:46   00:16:29       1                     0.96%      38 GiB   
+1     devops   32   529962   2021-05-11 02:16:04   00:25:28       1                     3.46%      62 GiB   
 ===============================================================================================================
-Manager Status: Stopped
+Manager Status: Running
 
 ==========================================================================
 type             drive                used     total    percent   plots
 ==========================================================================
-temp   /home/davar/CHIA/plots-tmp   0.25TiB   0.45TiB   58.3%     ?    
-dest   /home/davar/CHIA/plots       0.25TiB   0.45TiB   58.3%     ?    
+temp   /mnt/plots-tmp   0.18TiB   0.45TiB   42.2%     ?    
+dest   /mnt/plots       0.18TiB   0.45TiB   42.2%     ?    
 ==========================================================================
-CPU Usage: 30.5%
-RAM Usage: 5.48/15.53GiB(37.2%)
+CPU Usage: 26.0%
+RAM Usage: 2.74/15.53GiB(19.7%)
 
 Plots Completed Yesterday: 0
 Plots Completed Today: 0
 
-Next log check at 2021-05-11 02:07:16
+Next log check at 2021-05-11 02:42:32
 
 ```
 
