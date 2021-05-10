@@ -64,3 +64,4 @@ ADMIN_USER=admin ADMIN_PASSWORD=admin docker-compose up -d
 
 ```
 
+<img src="https://github.com/adavarski/chia-farming/blob/main/pictures/chia-host-monitoring.png" width="900">
