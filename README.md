@@ -15,11 +15,11 @@ chia stop all && chia start farmer
 mount SSD disks for plots temp --> /mnt/plots-tmp
 mount HDD disks for plots --> /mnt/plots
 
+### Test
 chia plots create -k 32 -b 5000 -t /mnt/plots-tmp -d /mnt/plots -r 4 -u 128
 ```
 
 ### Install Chia Plot Manager 
-
   
 ```
 cd ./plot-manager
