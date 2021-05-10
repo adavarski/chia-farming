@@ -10,27 +10,28 @@ python3 -m venv venv
 pip install -r requirements.txt
 python manager.py start
 python manager.py view
+#### Check 
 ===============================================================================================================
 num    job     k     pid            start          elapsed_time   phase   phase_times   progress   temp_size
 ===============================================================================================================
-1     devops   32   510118   2021-05-11 00:49:43   01:16:33       1                     6.92%      93 GiB   
-2     devops   32   523740   2021-05-11 01:49:46   00:16:29       1                     0.96%      38 GiB   
+1     devops   32   529962   2021-05-11 02:16:04   00:25:28       1                     3.46%      62 GiB   
 ===============================================================================================================
-Manager Status: Stopped
+Manager Status: Running
 
 ==========================================================================
 type             drive                used     total    percent   plots
 ==========================================================================
-temp   /home/davar/CHIA/plots-tmp   0.25TiB   0.45TiB   58.3%     ?    
-dest   /home/davar/CHIA/plots       0.25TiB   0.45TiB   58.3%     ?    
+temp   /mnt/plots-tmp   0.18TiB   0.45TiB   42.2%     ?    
+dest   /mnt/plots       0.18TiB   0.45TiB   42.2%     ?    
 ==========================================================================
-CPU Usage: 30.5%
-RAM Usage: 5.48/15.53GiB(37.2%)
+CPU Usage: 26.0%
+RAM Usage: 2.74/15.53GiB(19.7%)
 
 Plots Completed Yesterday: 0
 Plots Completed Today: 0
 
-Next log check at 2021-05-11 02:07:16
+Next log check at 2021-05-11 02:42:32
+
 
 ```
 
