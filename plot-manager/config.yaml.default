@@ -1,6 +1,6 @@
 # This is a single variable that should contain the location of your chia executable file. This is the blockchain executable.
 #
-# WINDOWS EXAMPLE: C:\Users\Swar\AppData\Local\chia-blockchain\app-1.1.2\resources\app.asar.unpacked\daemon\chia.exe
+# WINDOWS EXAMPLE: C:\Users\Davar\AppData\Local\chia-blockchain\app-1.1.2\resources\app.asar.unpacked\daemon\chia.exe
 #   LINUX EXAMPLE: /usr/lib/chia-blockchain/resources/app.asar.unpacked/daemon/chia
 #  LINUX2 EXAMPLE: /home/davar/chia-blockchain/venv/bin/chia
 chia_location: /home/davar/CHIA/chia-blockchain/venv/bin/chia
