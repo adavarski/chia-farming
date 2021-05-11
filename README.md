@@ -67,7 +67,7 @@ Plots Completed Today: 0
 
 Next log check at 2021-05-11 02:42:32
 
-#### Check : python manager logs
+#### Check : chia plot manager logs
 
 Example: tail -f ../logs/plotter/devops_2021-05-11_02_16_04_198995.log 
 	Bucket 127 uniform sort. Ram: 4.816GiB, u_sort min: 0.563GiB, qs min: 0.281GiB.
