@@ -1,4 +1,4 @@
-# Chia Plot Manager 
+### Chia Plot Manager 
 
 #### A plot manager for Chia plotting
 
