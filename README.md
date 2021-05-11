@@ -9,6 +9,11 @@ sh install.sh
 chia keys generate
 chia start farmer
 
+# (OPTIONAL) The GUI requires you have Ubuntu Desktop or a similar windowing system installed.
+sh install-gui.sh
+cd chia-blockchain-gui
+npm run electron &
+
 ### Check environment
 nc -z -v ${CHIA_FULL_NODE_IP} 8444 (or using https://portchecker.co/)
 chia fram summary
