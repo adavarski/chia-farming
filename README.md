@@ -1,4 +1,4 @@
-### Install Chia
+### Install/Setup/Check Chia environment
 
 ```
 ### Check environment
@@ -19,10 +19,10 @@ mount HDD disks for plots --> /mnt/plots
 chia plots create -k 32 -b 5000 -t /mnt/plots-tmp -d /mnt/plots -r 4 -u 128
 ```
 
-### Chia Plot Manager.
+### Chia Plot Manager (to keep the plots generating)
   
 ```
-### Install Chia Plot Manager (to keep the plots generating)
+### Install Chia Plot Manager 
 cd ./plot-manager
 python3 -m venv venv
 . ./venv/bin/activate
@@ -56,7 +56,7 @@ Next log check at 2021-05-11 02:42:32
 
 #### Check : python manager logs
 
-$ tail -f ../logs/plotter/devops_2021-05-11_02_16_04_198995.log 
+Example: tail -f ../logs/plotter/devops_2021-05-11_02_16_04_198995.log 
 	Bucket 127 uniform sort. Ram: 4.816GiB, u_sort min: 0.563GiB, qs min: 0.281GiB.
 	Total matches: 4294914133
 Forward propagation table time: 2212.902 seconds. CPU (109.520%) Tue May 11 02:59:47 2021
