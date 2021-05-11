@@ -1,4 +1,4 @@
-### Install/Setup/Check Chia environment
+### Setup/Check Chia environment
 
 ```
 ### Check environment
