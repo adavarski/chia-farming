@@ -1,6 +1,14 @@
 ### Setup/Check Chia environment
 
 ```
+### Checkout the source, install and start
+git clone https://github.com/Chia-Network/chia-blockchain.git -b latest --recurse-submodules
+cd chia-blockchain
+sh install.sh
+. ./activate
+chia keys generate
+chia start farmer
+
 ### Check environment
 nc -z -v ${CHIA_FULL_NODE_IP} 8444 (or using https://portchecker.co/)
 chia fram summary
