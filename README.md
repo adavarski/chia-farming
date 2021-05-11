@@ -2,9 +2,7 @@
 
 ```
 ### Check environment
-
 nc -z -v ${CHIA_FULL_NODE_IP} 8444 (or using https://portchecker.co/)
-
 chia fram summary
 chia wallet show
 chia plots check
@@ -27,9 +25,11 @@ cd ./plot-manager
 python3 -m venv venv
 . ./venv/bin/activate
 pip install -r requirements.txt
+
 ### Edit and set up the config.yaml to your own personal settings. 
+
+### Start chia plot manager
 python manager.py start
-python manager.py view
 
 #### Check : python manager.py view
 
