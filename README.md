@@ -19,7 +19,7 @@ mount HDD disks for plots --> /mnt/plots
 chia plots create -k 32 -b 5000 -t /mnt/plots-tmp -d /mnt/plots -r 4 -u 128
 ```
 
-### Install Chia Plot Manager 
+### Install Chia Plot Manager (to keep the plots generating).
   
 ```
 cd ./plot-manager
@@ -69,8 +69,6 @@ Computing table 3
 	Bucket 6 uniform sort. Ram: 4.816GiB, u_sort min: 2.250GiB, qs min: 0.563GiB.
 
 ```
-
-Note: The purpose of this plot manager library is to manage your plotting and kick off new plots with the settings that you configure. Everyone's system is unique so customization is an important feature that was engraved into this library. This library is simple, easy-to-use, and reliable to keep the plots generating.
 
 ### Monitoring 
 
