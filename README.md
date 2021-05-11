@@ -26,7 +26,7 @@ chia stop all && chia start farmer
 
 ### Mount disks 
 mount SATA SSD/NVMe SSD disks (2 Plotting SSDs: RAID0) for plots temp files -> /mnt/plots-tmp
-mount SATA HDD disks for plots (2/3 x WD Red Pro NAS HDD 16TB : RAID0 for ~ 200-300 k=32 plots) -> /mnt/plots
+mount SATA HDD disks for plots (2 x WD Red Pro NAS HDD 16TB : RAID0 for ~ 200-300 k=32 plots) -> /mnt/plots
 
 ### Test plot creation
 chia plots create -k 32 -b 5000 -t /mnt/plots-tmp -d /mnt/plots -r 4 -u 128
