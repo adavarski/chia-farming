@@ -87,7 +87,7 @@ Computing table 3
 ### Monitoring 
 
 ```
-./utils/docker-install.sh
+sh ./utils/docker-install.sh
 cd ./monitoring/docker-prometheus
 ADMIN_USER=admin ADMIN_PASSWORD=admin docker-compose up -d
 
