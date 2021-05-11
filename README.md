@@ -97,4 +97,4 @@ http://${CHIA_FULL_NODE_IP}:3000
 
 <img src="https://github.com/adavarski/chia-farming/blob/main/pictures/chia-host-monitoring.png" width="900">
 
-TODO: Add more Grafana dashboards. Gathering metrics using Prometheus and once metrics are gathered by Prometheus, they to be visualized using Grafana.
+TODO Plot Manager: Add Grafana dashboards -> Gathering metrics using Prometheus and once metrics are gathered by Prometheus, they to be visualized using Grafana.
