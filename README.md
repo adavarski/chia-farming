@@ -88,7 +88,7 @@ Computing table 3
 
 ```
 ./utils/docker-install.sh
-cd monitoring/docker-prometheus
+cd ./monitoring/docker-prometheus
 ADMIN_USER=admin ADMIN_PASSWORD=admin docker-compose up -d
 
 http://${CHIA_FULL_NODE_IP}:3000
