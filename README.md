@@ -7,7 +7,8 @@ cd chia-blockchain
 sh install.sh
 . ./activate
 chia keys generate
-chia start farmer
+### Start full-node, farmer, harvester, wallet
+chia start farmer 
 
 # (OPTIONAL) The GUI requires you have Ubuntu Desktop or a similar windowing system installed.
 sh install-gui.sh
