@@ -1,6 +1,6 @@
 # Chia Plot Manager 
 
-#### A plot manager for Chia plotting: https://www.chia.net/
+#### A plot manager for Chia plotting
 
 ## Installation
 
@@ -10,6 +10,7 @@ python3 -m venv venv
 pip install -r requirements.txt
 python manager.py start
 python manager.py view
+
 #### Check 
 ===============================================================================================================
 num    job     k     pid            start          elapsed_time   phase   phase_times   progress   temp_size
