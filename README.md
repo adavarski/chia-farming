@@ -3,7 +3,7 @@
 ```
 ### Check environment
 
-nc -z -v $CHIA_FULL_NODE_IP 8444 (or using https://portchecker.co/)
+nc -z -v ${CHIA_FULL_NODE_IP} 8444 (or using https://portchecker.co/)
 
 chia fram summary
 chia wallet show
@@ -62,6 +62,7 @@ Note: The purpose of this plot manager library is to manage your plotting and ki
 cd monitoring/docker-prometheus
 ADMIN_USER=admin ADMIN_PASSWORD=admin docker-compose up -d
 
+http://${CHIA_FULL_NODE_IP}:3000
 ```
 
 <img src="https://github.com/adavarski/chia-farming/blob/main/pictures/chia-host-monitoring.png" width="900">
