@@ -25,3 +25,19 @@ Containers:
 * NodeExporter (host metrics collector)
 * cAdvisor (containers metrics collector)
 
+## Check 
+```
+$ docker-compose ps
+    Name                  Command                  State                        Ports                  
+-------------------------------------------------------------------------------------------------------
+alertmanager   /bin/alertmanager --config ...   Up             0.0.0.0:9093->9093/tcp,:::9093->9093/tcp
+cadvisor       /usr/bin/cadvisor -logtostderr   Up (healthy)   0.0.0.0:8080->8080/tcp,:::8080->8080/tcp
+grafana        /setup.sh                        Up             0.0.0.0:3000->3000/tcp,:::3000->3000/tcp
+nodeexporter   /bin/node_exporter --path. ...   Up             0.0.0.0:9100->9100/tcp,:::9100->9100/tcp
+prometheus     /bin/prometheus --config.f ...   Up             0.0.0.0:9090->9090/tcp,:::9090->9090/tcp
+pushgateway    /bin/pushgateway                 Up             0.0.0.0:9091->9091/tcp,:::9091->9091/tcp
+```
+## Clean 
+```
+# docker-compose down
+```
