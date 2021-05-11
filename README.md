@@ -10,7 +10,7 @@ chia show -s -c
 chia stop all && chia start farmer 
 
 ### Mount disks 
-mount SSD disks for plots temp --> /mnt/plots-tmp
+mount SSD disks for plots temp files --> /mnt/plots-tmp
 mount HDD disks for plots --> /mnt/plots
 
 ### Test
