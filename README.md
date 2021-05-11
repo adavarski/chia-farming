@@ -19,9 +19,10 @@ mount HDD disks for plots --> /mnt/plots
 chia plots create -k 32 -b 5000 -t /mnt/plots-tmp -d /mnt/plots -r 4 -u 128
 ```
 
-### Install Chia Plot Manager (to keep the plots generating).
+### Chia Plot Manager.
   
 ```
+### Install Chia Plot Manager (to keep the plots generating)
 cd ./plot-manager
 python3 -m venv venv
 . ./venv/bin/activate
