@@ -8,6 +8,9 @@
 python3 -m venv venv
 . ./venv/bin/activate
 pip install -r requirements.txt
+
+### Edit and set up the config.yaml to your own personal settings. 
+
 python manager.py start
 python manager.py view
 
