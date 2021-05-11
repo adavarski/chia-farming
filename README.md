@@ -26,7 +26,7 @@ chia stop all && chia start farmer
 mount SSD disks for plots temp files -> /mnt/plots-tmp
 mount HDD disks for plots -> /mnt/plots
 
-### Test
+### Test plot creation
 chia plots create -k 32 -b 5000 -t /mnt/plots-tmp -d /mnt/plots -r 4 -u 128
 ```
 
