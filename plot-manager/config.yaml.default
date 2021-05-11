@@ -133,7 +133,7 @@ jobs:
   #                              same value.
   
   - name: devops
-    max_plots: 999
+    max_plots: 230
     farmer_public_key:
     pool_public_key:
     temporary_directory: /mnt/plots-tmp
