@@ -6,6 +6,7 @@ git clone https://github.com/Chia-Network/chia-blockchain.git -b latest --recurs
 cd chia-blockchain
 sh install.sh
 . ./activate
+chia version
 chia keys generate
 ### Start full-node, farmer, harvester, wallet
 chia start farmer 
@@ -18,6 +19,7 @@ npm run electron &
 ### Setup FW/port forwarding FW_external_IP:8444->CHIA_FULL_NODE_IP:8444
 ### Check environment
 nc -z -v ${FW_external_IP} 8444 (or using https://portchecker.co/) 
+
 chia fram summary
 chia wallet show
 chia plots check
