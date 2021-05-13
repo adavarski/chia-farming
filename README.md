@@ -6,7 +6,7 @@ git clone https://github.com/Chia-Network/chia-blockchain.git -b latest --recurs
 cd chia-blockchain
 sh install.sh
 . ./activate
-chia version
+chia version (1.1.4 currently)
 chia keys generate
 ### Start full-node, farmer, harvester, wallet
 chia start farmer 
