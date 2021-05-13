@@ -16,7 +16,7 @@ sh install-gui.sh
 cd chia-blockchain-gui
 npm run electron &
 
-### Setup FW/port forwarding FW_external_IP:8444->CHIA_FULL_NODE_IP:8444
+### Setup FW/port forwarding FW_external_IP:8444->CHIA_FULL_NODE_IP:8444 (only during wallet sync)
 ### Check environment
 nc -z -v ${FW_external_IP} 8444 (or using https://portchecker.co/) 
 
