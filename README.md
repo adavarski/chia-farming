@@ -55,7 +55,7 @@ python manager.py start
 
 ### Monitoring 
 
-HOSTMON
+#### Host monitoring
 ```
 sh ./utils/docker-install.sh
 cd ./monitoring/docker-prometheus
@@ -68,7 +68,7 @@ http://${CHIA_FULL_NODE_IP}:3000
 
 TODO Plot Manager: Add Grafana dashboards -> Gathering metrics using Prometheus and once metrics are gathered by Prometheus, they to be visualized using Grafana.
 
-CHIAMON
+#### Chia monitoring
 
 ```
 chia configure -log-level INFO
