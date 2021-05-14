@@ -76,5 +76,5 @@ git clone https://github.com/retzkek/chiamon
 cd chiamon
 docker-compose up -d
 ```
-<img src="https://github.com/adavarski/chia-farming/blob/main/pictures/chia-1-ssd.png" width="900">
+<img src="https://github.com/adavarski/chia-farming/blob/main/pictures/chia-chiamon-15min-start-ploting.png" width="900">
 
