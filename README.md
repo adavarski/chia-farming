@@ -69,12 +69,23 @@ http://${CHIA_FULL_NODE_IP}:3000
 TODO Plot Manager: Add Grafana dashboards -> Gathering metrics using Prometheus and once metrics are gathered by Prometheus, they to be visualized using Grafana.
 
 CHIAMON
+
 ```
 chia configure -log-level INFO
-chia stop all && chia start farmer 
+chia stop all && chia start farmer
+```
+Option1: 
+```
 git clone https://github.com/retzkek/chiamon
 cd chiamon
 docker-compose up -d
 ```
+Option2:
+```
+cd ./monitoring/docker-chiamon
+docker-compose up -d
+
+```
+
 <img src="https://github.com/adavarski/chia-farming/blob/main/pictures/chia-chiamon-1h-start-ploting.png" width="900">
 
