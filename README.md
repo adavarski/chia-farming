@@ -55,6 +55,7 @@ python manager.py start
 
 ### Monitoring 
 
+HOSTMON
 ```
 sh ./utils/docker-install.sh
 cd ./monitoring/docker-prometheus
@@ -66,3 +67,14 @@ http://${CHIA_FULL_NODE_IP}:3000
 <img src="https://github.com/adavarski/chia-farming/blob/main/pictures/chia-1-ssd.png" width="900">
 
 TODO Plot Manager: Add Grafana dashboards -> Gathering metrics using Prometheus and once metrics are gathered by Prometheus, they to be visualized using Grafana.
+
+CHIAMON
+```
+chia configure -log-level INFO
+chia stop all && chia start farmer 
+git clone https://github.com/retzkek/chiamon
+cd chiamon
+docker-compose up -d
+```
+<img src="https://github.com/adavarski/chia-farming/blob/main/pictures/chia-1-ssd.png" width="900">
+
