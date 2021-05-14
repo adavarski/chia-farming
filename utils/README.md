@@ -24,6 +24,7 @@ sh install.sh
 
 . ./activate
 
+chia version (shoud be 1.1.5)
 chia init
 chia start farmer
 
