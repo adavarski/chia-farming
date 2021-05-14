@@ -25,6 +25,7 @@ sh install.sh
 . ./activate
 
 chia init
+chia start farmer
 
 # The GUI requires you have Ubuntu Desktop or a similar windowing system installed.
 # You can not install and run the GUI as root
