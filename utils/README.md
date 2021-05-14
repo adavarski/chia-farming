@@ -1,13 +1,13 @@
 TODO
 ```
 ### To Update/Upgrade from previous version
-tar -cvf /home/davar/CHIA/backup/chia-backup."$(date '+%Y-%m-%d').1.1.4.tar"  /home/davar/.chia
-
 cd chia-blockchain
 
 
 . ./activate
 chia stop -d all
+tar -cvf /home/davar/CHIA/backup/chia-backup."$(date '+%Y-%m-%d').1.1.4.tar"  /home/davar/.chia
+
 deactivate
 git fetch
 git checkout latest
