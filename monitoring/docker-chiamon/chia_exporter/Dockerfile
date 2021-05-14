@@ -2,8 +2,8 @@ FROM golang:alpine AS builder
 
 WORKDIR /build
 RUN apk add --update --no-cache --virtual build-dependencies git make \
- && git clone https://github.com/adavarski/chia-farming \
- && cd chia-farming/monitoring/chia_exporter \
+ && git clone https://github.com/adavarski/chia_exporter \
+ && cd chia_exporter \
  && go build -tags netgo
 
 FROM alpine
