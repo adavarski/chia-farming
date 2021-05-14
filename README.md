@@ -92,3 +92,4 @@ http://${CHIA_FULL_NODE_IP}:3000
 
 <img src="https://github.com/adavarski/chia-farming/blob/main/pictures/chia-chiamon-1h-start-ploting.png" width="900">
 
+Note: `docker volume prune` for 'Search Time Histogram'   
