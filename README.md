@@ -55,9 +55,12 @@ python manager.py start
 
 ### Monitoring 
 
-#### Host monitoring (plotting)
 ```
 sh ./utils/docker-install.sh
+
+```
+#### Host monitoring (plotting)
+```
 cd ./monitoring/docker-prometheus
 ADMIN_USER=admin ADMIN_PASSWORD=admin docker-compose up -d
 
