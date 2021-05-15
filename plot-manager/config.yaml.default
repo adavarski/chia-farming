@@ -132,11 +132,11 @@ jobs:
   #                              These two directories will be in sync so that they will always be submitted as the
   #                              same value.
   
-  - name: devops
+  - name: ssd-job
     max_plots: 230
     farmer_public_key:
     pool_public_key:
-    temporary_directory: /mnt/plots-tmp
+    temporary_directory: /mnt/plots-tmp/disk1
     temporary2_directory:
     destination_directory: /mnt/plots
     size: 32
@@ -152,46 +152,45 @@ jobs:
     concurrency_start_early_phase_delay: 0
     temporary2_destination_sync: false
 
-  #- name: micron
-  #  max_plots: 999
-  #  farmer_public_key:
-  #  pool_public_key:
-  #  temporary_directory: /mnt/plots-tmp
-  #  temporary2_directory:
-  #  destination_directory: /mnt/plots
-  #  size: 32
-  #  bitfield: true
-  #  threads: 8
-  #  buckets: 128
-  #  memory_buffer: 5000
-  #  max_concurrent: 6
-  #  max_concurrent_with_start_early: 7
-  #  stagger_minutes: 60
-  #  max_for_phase_1: 2
-  #  concurrency_start_early_phase: 4
-  #  concurrency_start_early_phase_delay: 0
-  #  temporary2_destination_sync: false
+     #  - name: disk1-job
+    #max_plots: 230
+    #farmer_public_key:
+    #pool_public_key:
+    #temporary_directory: /home/davar/CHIA/plots-disk1-tmp
+    #temporary2_directory:
+    #destination_directory: /home/davar/CHIA/plots-disk1
+    #size: 32
+    #bitfield: true
+    #threads: 4
+    #buckets: 128
+    #memory_buffer: 3389
+    #max_concurrent: 1
+    #max_concurrent_with_start_early: 7
+    #stagger_minutes: 60
+    #max_for_phase_1: 2
+    #concurrency_start_early_phase: 4
+    #concurrency_start_early_phase_delay: 0
+    #temporary2_destination_sync: false
 
-  #- name: inland
-  #  max_plots: 999
-  #  farmer_public_key:
-  #  pool_public_key:
-  #  temporary_directory: /mnt/plots-tmp
-  #  temporary2_directory:
-  #    - /mnt/plots-tmp1
-  #    - /mnt/plots-tmp2
-  #  destination_directory:
-  #    - /mnt/plots1
-  #    - /mnt/plots2
-  #  size: 32
-  #  bitfield: true
-  #  threads: 8
-  #  buckets: 128
-  #  memory_buffer: 5000
-  #  max_concurrent: 2
-  #  max_concurrent_with_start_early: 3
-  #  stagger_minutes: 180
-  #  max_for_phase_1: 1
-  #  concurrency_start_early_phase: 4
-  #  concurrency_start_early_phase_delay: 0
-  #  temporary2_destination_sync: false
+    #  - name: disk2-job
+    #max_plots: 230
+    #farmer_public_key:
+    #pool_public_key:
+    #temporary_directory: /home/davar/CHIA/plots-disk2-tmp
+    #temporary2_directory:
+    #destination_directory: /home/davar/CHIA/plots-disk2
+    #size: 32
+    #bitfield: true
+    #threads: 4
+    #buckets: 128
+    #memory_buffer: 3389
+    #max_concurrent: 1
+    #max_concurrent_with_start_early: 7
+    #stagger_minutes: 60
+    #max_for_phase_1: 2
+    #concurrency_start_early_phase: 4
+    #concurrency_start_early_phase_delay: 0
+    #temporary2_destination_sync: false
+
+
+ 
