@@ -138,12 +138,12 @@ jobs:
     pool_public_key:
     temporary_directory: /mnt/plots-tmp/disk1
     temporary2_directory:
-    destination_directory: /mnt/plots
+    destination_directory: /mnt/plots_disk1
     size: 32
     bitfield: true
     threads: 4 
     buckets: 128
-    memory_buffer: 5000
+    memory_buffer: 3389
     max_concurrent: 1
     max_concurrent_with_start_early: 7
     stagger_minutes: 60
