@@ -6,7 +6,7 @@ git clone https://github.com/Chia-Network/chia-blockchain.git -b latest --recurs
 cd chia-blockchain
 sh install.sh
 . ./activate
-chia version (1.1.4 currently)
+chia version (1.1.4 for example)
 chia keys generate
 ### Start full-node, farmer, harvester, wallet
 chia start farmer 
@@ -16,7 +16,7 @@ sh install-gui.sh
 cd chia-blockchain-gui
 npm run electron &
 
-### Setup FW/port forwarding FW_external_IP:8444->CHIA_FULL_NODE_IP:8444 (only during wallet sync)
+### Setup FW/port forwarding FW_external_IP:8444->CHIA_FULL_NODE_IP:8444 (only needed during wallet sync)
 ### Check environment
 nc -z -v ${FW_external_IP} 8444 (or using https://portchecker.co/) 
 
@@ -28,7 +28,7 @@ chia stop all && chia start farmer
 
 ### Mount disks 
 mount SATA SSD/NVMe SSD disks (2 Plotting SSDs: RAID0) for plots temp files -> /mnt/plots-tmp (example: 1 SATA SSD ---> /mnt/plots-tmp/ ---> disk1/disk2 directories for plots tmp)
-mount SATA HDD disks for plots (2 x WD Red Pro NAS HDD 16TB : RAID0 for ~ 200-300 k=32 plots) -> /mnt/plots (exmple: 2 HDD ---> /mnt/plots_disk1 & mnt/plots_disk2)
+mount SATA HDD disks for plots (2 x WD Red Pro NAS HDD 16TB : RAID0 for ~ 200-300 k=32 plots) -> /mnt/plots (exmple: 2 HDD ---> /mnt/plots_disk1 & /mnt/plots_disk2)
 
 ### Test plot creation (default: -b 3389 -u 128)
 chia plots create -k 32 -b 3389 -t /mnt/plots-tmp -d /mnt/plots -r 4 -u 128
@@ -59,17 +59,6 @@ python manager.py start
 sh ./utils/docker-install.sh
 
 ```
-#### Host monitoring (plotting)
-```
-cd ./monitoring/docker-prometheus
-ADMIN_USER=admin ADMIN_PASSWORD=admin docker-compose up -d
-
-http://${CHIA_FULL_NODE_IP}:3000
-```
-
-<img src="https://github.com/adavarski/chia-farming/blob/main/pictures/chia-1-ssd.png" width="900">
-
-TODO Plot Manager: Add Grafana dashboards -> Gathering metrics using Prometheus and once metrics are gathered by Prometheus, they to be visualized using Grafana.
 
 #### Chia monitoring (plotting & farming)
 
@@ -96,3 +85,16 @@ http://${CHIA_FULL_NODE_IP}:3000
 <img src="https://github.com/adavarski/chia-farming/blob/main/pictures/chia-chiamon-1h-start-ploting.png" width="900">
 
 Note: `docker volume prune` for 'Search Time Histogram'   
+
+#### Host monitoring (plotting)
+```
+cd ./monitoring/docker-prometheus
+ADMIN_USER=admin ADMIN_PASSWORD=admin docker-compose up -d
+
+http://${CHIA_FULL_NODE_IP}:3000
+```
+
+<img src="https://github.com/adavarski/chia-farming/blob/main/pictures/chia-1-ssd.png" width="900">
+
+TODO Plot Manager: Add Grafana dashboards -> Gathering metrics using Prometheus and once metrics are gathered by Prometheus, they to be visualized using Grafana.
+
