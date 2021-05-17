@@ -67,17 +67,17 @@ chia configure -log-level INFO
 chia stop all && chia start farmer
 ```
 
-Option1: 
-```
-git clone https://github.com/retzkek/chiamon
-cd chiamon
-docker-compose up -d
-```
-Option2:
+Option1 (less metrics):
 ```
 cd ./monitoring/docker-chiamon
 docker-compose up -d
 
+```
+Option2 (more metrics): 
+```
+git clone https://github.com/retzkek/chiamon
+cd chiamon
+docker-compose up -d
 ```
 
 http://${CHIA_FULL_NODE_IP}:3000
