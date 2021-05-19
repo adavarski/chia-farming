@@ -82,7 +82,7 @@ docker-compose up -d
 
 http://${CHIA_FULL_NODE_IP}:3000
 
-<img src="https://github.com/adavarski/chia-farming/blob/main/pictures/chia-chiamon-1h-start-ploting.png" width="900">
+<img src="https://github.com/adavarski/chia-farming/blob/main/pictures/chia-1SSD-1HDD.png" width="900">
 
 Note: `docker volume prune` for 'Search Time Histogram'   
 
