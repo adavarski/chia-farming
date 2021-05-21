@@ -69,8 +69,8 @@ dest   /mnt/plots/disk1       0.47TiB   7.22TiB   6.8%      ?
 CPU Usage: 62.4%
 RAM Usage: 3.58/15.53GiB(25.3%)
 
-Plots Completed Yesterday: 0
-Plots Completed Today: 2
+Plots Completed Yesterday: 5
+Plots Completed Today: 3
 
 Next log check at 2021-05-19 09:02:21
 
