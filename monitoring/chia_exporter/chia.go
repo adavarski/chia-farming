@@ -42,7 +42,7 @@ type BlockchainState struct {
 			TotalIters                 int `json:"total_iters"`
 			Weight                     int
 		}
-		Space        int64
+		Space        float64
 		SubSlotIters int `json:"sub_slot_iters"`
 		Sync         struct {
 			SyncMode           bool `json:"sync_mode"`
@@ -87,13 +87,17 @@ type Connections struct {
 	Success bool
 }
 
+type Wallet struct {
+	ID        int
+	Name      string
+	Type      int
+	Data      string
+	StringID  string
+	PublicKey string
+}
+
 type Wallets struct {
-	Wallets []struct {
-		ID   int
-		Name string
-		Type int
-		Data string
-	}
+	Wallets []Wallet
 	Success bool
 }
 
@@ -107,4 +111,21 @@ type WalletBalance struct {
 		WalletID           int   `json:"wallet_id"`
 	} `json:"wallet_balance"`
 	Success bool
+}
+
+type WalletSyncStatus struct {
+	GenesisInitialized bool `json:"genesis_initialized"`
+	Synced             bool
+	Syncing            bool
+	Succes             bool
+}
+
+type WalletHeightInfo struct {
+	Height  int64
+	Success bool
+}
+
+type WalletPublicKeys struct {
+	PublicKeyFingerprints []int `json:"public_key_fingerprints"`
+	Success               bool
 }

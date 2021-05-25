@@ -53,19 +53,25 @@ chia_peers_count{type="5"} 0
 chia_peers_count{type="6"} 1
 # HELP chia_wallet_confirmed_balance_mojo Confirmed wallet balance.
 # TYPE chia_wallet_confirmed_balance_mojo gauge
-chia_wallet_confirmed_balance_mojo{id="1"} 100
+chia_wallet_confirmed_balance_mojo{wallet_id="1",wallet_fingerprint="103402894"} 100
+# HELP chia_wallet_height Wallet synced height.
+# TYPE chia_wallet_height gauge
+chia_wallet_height{wallet_id="1",wallet_fingerprint="103402894"} 30756
 # HELP chia_wallet_max_send_mojo Maximum sendable amount.
 # TYPE chia_wallet_max_send_mojo gauge
-chia_wallet_max_send_mojo{id="1"} 100
+chia_wallet_max_send_mojo{wallet_id="1",wallet_fingerprint="103402894"} 100
 # HELP chia_wallet_pending_change_mojo Pending change amount.
 # TYPE chia_wallet_pending_change_mojo gauge
-chia_wallet_pending_change_mojo{id="1"} 0
+chia_wallet_pending_change_mojo{wallet_id="1",wallet_fingerprint="103402894"} 0
 # HELP chia_wallet_spendable_balance_mojo Spendable wallet balance.
 # TYPE chia_wallet_spendable_balance_mojo gauge
-chia_wallet_spendable_balance_mojo{id="1"} 100
+chia_wallet_spendable_balance_mojo{wallet_id="1",wallet_fingerprint="103402894"} 100
+# HELP chia_wallet_sync_status Sync status, 0=not synced, 1=syncing, 2=synced
+# TYPE chia_wallet_sync_status gauge
+chia_wallet_sync_status{wallet_id="1",wallet_fingerprint="103402894"} 0
 # HELP chia_wallet_unconfirmed_balance_mojo Unconfirmed wallet balance.
 # TYPE chia_wallet_unconfirmed_balance_mojo gauge
-chia_wallet_unconfirmed_balance_mojo{id="1"} 100
+chia_wallet_unconfirmed_balance_mojo{wallet_id="1",wallet_fingerprint="103402894"} 100
 ```
 
 ### Blockchain
@@ -76,9 +82,9 @@ endpoint.
 
 ### Connections
 
-The number of connections are collected for each node type from the
-[get_connections](https://github.com/Chia-Network/chia-blockchain/wiki/RPC-Interfaces#get_connections)
-endpoint.
+* The number of connections are collected for each node type from the
+  [get_connections](https://github.com/Chia-Network/chia-blockchain/wiki/RPC-Interfaces#get_connections)
+  endpoint.
 
 Node types (from
 [chia/server/outbound_message.py](https://github.com/Chia-Network/chia-blockchain/blob/main/chia/server/outbound_message.py#L10)):
@@ -92,6 +98,21 @@ Node types (from
 
 ### Wallet
 
-The wallet balances are collected from the [get_wallet_balance
-](https://github.com/Chia-Network/chia-blockchain/wiki/RPC-Interfaces#get_wallet_balance)
-endpoint.
+The list of wallets is obtained from the
+[get_wallets](https://github.com/Chia-Network/chia-blockchain/wiki/RPC-Interfaces#get_wallets)
+endpoint. The wallet metrics are collected for each wallet, and include
+`wallet_id` and `wallet_fingerprint` labels.
+
+* Balances are collected from the
+  [get_wallet_balance](https://github.com/Chia-Network/chia-blockchain/wiki/RPC-Interfaces#get_wallet_balance)
+  endpoint.
+
+* Sync status is collected from the
+  [get_sync_status](https://github.com/Chia-Network/chia-blockchain/wiki/RPC-Interfaces#get_sync_status)
+  endpoint.
+
+* Height is collected from the
+  [get_height_info](https://github.com/Chia-Network/chia-blockchain/wiki/RPC-Interfaces#get_height_info)
+  endpoint.
+
+
