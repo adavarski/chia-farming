@@ -7,7 +7,7 @@ from the Chia node, with a [docker-compose](https://github.com/docker/compose/)
 stack to collect data with [Prometheus](https://prometheus.io/) and graph in
 [Grafana](https://grafana.com).
 
-![Chia dashboard](https://img.kmr.me/posts/chiamon2.png)
+![Chia dashboard](https://github.com/adavarski/chia-farming/blob/main/monitoring/docker-chiamon/chiamon.png)
 
 ## mtail program
 
