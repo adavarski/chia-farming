@@ -1,7 +1,7 @@
 docker: prometheus-grafana-nodeexporter-etc.
 =============================================
 
-Monitoring stack for Docker host and containers with [Prometheus](https://prometheus.io/), [Grafana](http://grafana.org/), [cAdvisor](https://github.com/google/cadvisor),
+Monitoring stack for host and docker containers with [Prometheus](https://prometheus.io/), [Grafana](http://grafana.org/), [cAdvisor](https://github.com/google/cadvisor),
 [NodeExporter](https://github.com/prometheus/node_exporter) and alerting with [AlertManager](https://github.com/prometheus/alertmanager).
 
 ## Run monitoring stack
