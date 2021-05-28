@@ -37,6 +37,15 @@ nodeexporter   /bin/node_exporter --path. ...   Up             0.0.0.0:9100->910
 prometheus     /bin/prometheus --config.f ...   Up             0.0.0.0:9090->9090/tcp,:::9090->9090/tcp
 pushgateway    /bin/pushgateway                 Up             0.0.0.0:9091->9091/tcp,:::9091->9091/tcp
 ```
+### Host monitoring (plotting)
+
+http://${CHIA_FULL_NODE_IP}:3000
+
+<img src="https://github.com/adavarski/chia-farming/blob/main/pictures/chia-1-ssd.png" width="900">
+
+TODO Plot Manager & Chia Framing: Add Grafana dashboards -> Gathering metrics using Prometheus and once metrics are gathered by Prometheus, they to be visualized using Grafana.
+
+
 ## Clean 
 ```
 # docker-compose down
