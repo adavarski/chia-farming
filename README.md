@@ -111,15 +111,3 @@ http://${CHIA_FULL_NODE_IP}:3000
 
 Note: `docker volume prune` for 'Search Time Histogram'   
 
-#### Host monitoring (plotting)
-```
-cd ./monitoring/docker-prometheus
-ADMIN_USER=admin ADMIN_PASSWORD=admin docker-compose up -d
-
-http://${CHIA_FULL_NODE_IP}:3000
-```
-
-<img src="https://github.com/adavarski/chia-farming/blob/main/pictures/chia-1-ssd.png" width="900">
-
-TODO Plot Manager: Add Grafana dashboards -> Gathering metrics using Prometheus and once metrics are gathered by Prometheus, they to be visualized using Grafana.
-
