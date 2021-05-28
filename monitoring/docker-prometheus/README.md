@@ -37,7 +37,7 @@ nodeexporter   /bin/node_exporter --path. ...   Up             0.0.0.0:9100->910
 prometheus     /bin/prometheus --config.f ...   Up             0.0.0.0:9090->9090/tcp,:::9090->9090/tcp
 pushgateway    /bin/pushgateway                 Up             0.0.0.0:9091->9091/tcp,:::9091->9091/tcp
 ```
-### Host monitoring (plotting)
+## Host monitoring (plotting)
 
 http://${CHIA_FULL_NODE_IP}:3000
 
