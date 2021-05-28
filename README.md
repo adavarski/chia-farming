@@ -75,7 +75,7 @@ Next log check at 2021-05-21 16:10:19
 
 
 
-#### Check : chia plot manager logs (example: tail -f ../logs/plotter/devops_2021-05-11_02_16_04_198995.log )
+#### Check : chia plot manager logs (example: tail -f ../logs/plotter/ssd-job_2021-05-15_12_29_50_943354.log )
 ```
 
 ### Monitoring 
