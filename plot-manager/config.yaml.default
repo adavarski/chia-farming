@@ -133,12 +133,12 @@ jobs:
   #                              same value.
   
   - name: ssd-job
-    max_plots: 230
+    max_plots: 62
     farmer_public_key:
     pool_public_key:
     temporary_directory: /mnt/plots-tmp/disk1
     temporary2_directory:
-    destination_directory: /mnt/plots_disk1
+    destination_directory: /mnt/plots/disk1
     size: 32
     bitfield: true
     threads: 4 
@@ -151,6 +151,27 @@ jobs:
     concurrency_start_early_phase: 4
     concurrency_start_early_phase_delay: 0
     temporary2_destination_sync: false
+
+  - name: disk1_job
+    max_plots: 62
+    farmer_public_key:
+    pool_public_key:
+    temporary_directory: /mnt/plots/tmp
+    temporary2_directory:
+    destination_directory: /mnt/plots/disk1
+    size: 32
+    bitfield: true
+    threads: 2
+    buckets: 128
+    memory_buffer: 3389
+    max_concurrent: 1
+    max_concurrent_with_start_early: 7
+    stagger_minutes: 60
+    max_for_phase_1: 2
+    concurrency_start_early_phase: 4
+    concurrency_start_early_phase_delay: 0
+    temporary2_destination_sync: false
+
 
 
   #- name: ssd-job-disk1
