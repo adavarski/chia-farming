@@ -78,27 +78,24 @@ Next log check at 2021-05-21 16:10:19
 #### Check : chia plot manager logs (example: tail -f ../logs/plotter/ssd-job_2021-05-15_12_29_50_943354.log )
 ```
 
-### Monitoring 
+### Chia Monitoring (plotting & farming)
 
 ```
+### Install docker & docker-compose
 sh ./utils/docker-install.sh
 
-```
-
-#### Chia monitoring (plotting & farming)
-
-```
+### Setup chia log level
 chia configure -log-level INFO
 chia stop all && chia start farmer
 ```
 
-Option1 (less metrics):
+Option1 (less metrics monitoring):
 ```
 cd ./monitoring/docker-chiamon
 docker-compose up -d
 
 ```
-Option2 (more metrics): 
+Option2 (more metrics monitoring): 
 ```
 git clone https://github.com/retzkek/chiamon
 cd chiamon
