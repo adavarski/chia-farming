@@ -4,7 +4,7 @@
 
 
 ```
-## Installation
+### Installation
 
 python3 -m venv venv
 . ./venv/bin/activate
@@ -15,9 +15,9 @@ pip install -r requirements.txt
 python manager.py start
 python manager.py view
 
-#### Check : python manager.py view
+### Check : python manager.py view
 
-#### Check : chia plot manager logs (example: tail -f ../logs/plotter/ssd-job_2021-05-15_12_29_50_943354.log )
+### Check : chia plot manager logs (example: tail -f ../logs/plotter/ssd-job_2021-05-15_12_29_50_943354.log )
 
 ```
 
