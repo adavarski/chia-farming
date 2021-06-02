@@ -36,6 +36,8 @@ pv -paterb /dev/zero > test_file
 fio --randrepeat=1 --ioengine=libaio --direct=1 --gtod_reduce=1 --name=test --filename=random_read_write.fio --bs=4k --iodepth=64 --size=1G --readwrite=randrw --rwmixread=75
 sudo smartctl -t conveyance /dev/sdc
 sudo smartctl -l selftest /dev/sdc
+sudo smartctl --all /dev/sda
+sudo smartctl --all /dev/sdc
 
 ### Test plots creation (default: -b 3389 -u 128)
 chia plots create -k 32 -b 3389 -t /mnt/plots-tmp -d /mnt/plots -r 4 -u 128
