@@ -30,14 +30,14 @@ chia stop all && chia start farmer
 mount SATA SSD/NVMe SSD disks (2 Plotting SSDs: RAID0) for plots temp files -> /mnt/plots-tmp (example: 1 SATA SSD ---> /mnt/plots-tmp/ ---> disk1/disk2 directories for plots tmp)
 mount SATA HDD disks for plots (2 x WD Red Pro NAS HDD 16TB : RAID0 for ~ 200-300 k=32 plots) -> /mnt/plots (exmple: 2 HDD ---> /mnt/plots_disk1 & /mnt/plots_disk2)
 
-### Test disk R/W performance
+### Test disks and R/W performance
 dd if=/dev/zero of=/mnt/plots-tmp/test1.img bs=1G count=1 oflag=dsyn
 pv -paterb /dev/zero > test_file
 fio --randrepeat=1 --ioengine=libaio --direct=1 --gtod_reduce=1 --name=test --filename=random_read_write.fio --bs=4k --iodepth=64 --size=1G --readwrite=randrw --rwmixread=75
 sudo smartctl -t conveyance /dev/sdc
 sudo smartctl -l selftest /dev/sdc
 
-### Test and plots creation (default: -b 3389 -u 128)
+### Test plots creation (default: -b 3389 -u 128)
 chia plots create -k 32 -b 3389 -t /mnt/plots-tmp -d /mnt/plots -r 4 -u 128
 
 ```
