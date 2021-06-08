@@ -16,7 +16,7 @@ sh install-gui.sh
 cd chia-blockchain-gui
 npm run electron &
 
-### Setup FW/port forwarding FW_external_IP:8444->CHIA_FULL_NODE_IP:8444 (only needed during wallet sync)
+### Setup FW/port forwarding FW_external_IP:8444->CHIA_NODE_IP:8444 (only needed during wallet sync)
 ### Check environment
 nc -z -v ${FW_external_IP} 8444 (or using https://portchecker.co/) 
 
@@ -113,7 +113,7 @@ cd chiamon
 docker-compose up -d
 ```
 
-http://${CHIA_FULL_NODE_IP}:3000
+http://${CHIA_NODE_IP}:3000
 
 <img src="https://github.com/adavarski/chia-farming/blob/main/pictures/chiamon.png" width="900">
 
